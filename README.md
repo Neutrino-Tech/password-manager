@@ -38,5 +38,4 @@ class MainWindow(tk.Tk):
             host="localhost",
             user="root",
             password="mysql",
-            database="password_manager" 
-```
+            database="password_manager"```
