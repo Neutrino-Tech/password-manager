@@ -6,8 +6,6 @@ Password manager - using tkinter for interface mysql for database and random mod
 <h3>Installation</h3>
 
 ```bash
-sudo dnf install php wget openssh
-git clone https://github.com/Neutrino-Tech/password-manager.git
 pip install tkinter mysql.connector
 ```
 <h3>Usage</h3>
@@ -27,7 +25,9 @@ CREATE TABLE password_manager (
    password VARCHAR(255) NOT NULL
 );
 ```
-<h4>Note :- Also change the your host, username, password and database in manager.py
+<h3Change your mysql config</h3>
+```bash
+Also change the your host, username, password and database in manager.py
 class MainWindow(tk.Tk):
     def __init__(self):
         # Connect SQL
@@ -39,4 +39,5 @@ class MainWindow(tk.Tk):
             password="mysql",
             database="password_manager" 
         )
-</h4>
+        );
+```
