@@ -7,7 +7,7 @@ Password manager - using tkinter for interface mysql for database and random mod
 <h3>Installation</h3>
 
 ```bash
-pip install tkinter mysql.connector
+pip install tkinter mysql-connector
 git clone https://github.com/Neutrino-Tech/password-manager.git
 ```
 <h3>Usage</h3>
