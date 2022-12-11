@@ -40,4 +40,4 @@ class MainWindow(tk.Tk):
             user="root",
             password="mysql",
             database="password_manager"
-            ```
+```
