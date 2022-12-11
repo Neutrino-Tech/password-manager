@@ -27,6 +27,7 @@ CREATE TABLE password_manager (
 );
 ```
 <h3>Change your mysql config</h3>
+
 ```bash
 > Also change the your host, username, password and database in manager.py ->
 class MainWindow(tk.Tk):
@@ -38,4 +39,5 @@ class MainWindow(tk.Tk):
             host="localhost",
             user="root",
             password="mysql",
-            database="password_manager"```
+            database="password_manager"
+            ```
