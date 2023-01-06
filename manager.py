@@ -18,6 +18,10 @@ class MainWindow(tk.Tk):
             password="mysql",
             database="password_manager"
         )
+        #Creating table password_manager
+        cursor = db.cursor()
+        cursor.execute("CREATE TABLE password_manager ( id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, website VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL )")
+
         # Add the Name, Username, Website, and Password fields in tkinter
         name_label = tk.Label(self, text="Name:")
         name_label.grid(row=0, column=0)
@@ -119,6 +123,7 @@ class MainWindow(tk.Tk):
 
         # Show the saved details 
         show_details()
+        db.close()
 
 start_page = tk.Tk()
 start_page.title("Start Page")
