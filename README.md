@@ -16,16 +16,7 @@ git clone https://github.com/Neutrino-Tech/password-manager.git
 > python3 manager.py
 > Also create a database in mysql using ->
 CREATE database password_manager;
-and then
-USE password_manager;
-Create a table named password_manager ->
-CREATE TABLE password_manager (
-   id INTEGER PRIMARY KEY AUTO_INCREMENT,
-   name VARCHAR(255) NOT NULL,
-   username VARCHAR(255) NOT NULL,
-   website VARCHAR(255) NOT NULL,
-   password VARCHAR(255) NOT NULL
-);
+
 ```
 <h3>Change your mysql config</h3>
 
