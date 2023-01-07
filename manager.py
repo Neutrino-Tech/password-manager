@@ -123,7 +123,6 @@ class MainWindow(tk.Tk):
 
         # Show the saved details 
         show_details()
-        db.close()
 
 start_page = tk.Tk()
 start_page.title("Start Page")
