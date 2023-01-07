@@ -19,8 +19,19 @@ class MainWindow(tk.Tk):
             database="password_manager"
         )
         #Creating table password_manager
-        cursor = db.cursor()
-        cursor.execute("CREATE TABLE password_manager ( id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, website VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL )")
+        def create_password_manager_table():
+            cursor = db.cursor()
+            query = "SHOW TABLES LIKE '{}'".format('password_manager')
+            cursor.execute(query)
+            result = cursor.fetchone()
+            # If the table exists, result will be a tuple containing the table name
+            # If the table does not exist, result will be None
+            if result:
+                return
+            else:
+                cursor.execute("CREATE TABLE password_manager ( id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, website VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL )")
+
+        create_password_manager_table()
 
         # Add the Name, Username, Website, and Password fields in tkinter
         name_label = tk.Label(self, text="Name:")
