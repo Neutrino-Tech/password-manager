@@ -30,7 +30,7 @@ class MainWindow(tk.Tk):
                 return
             else:
                 cursor.execute("CREATE TABLE password_manager ( id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, website VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL )")
-
+            db.commit()
         create_password_manager_table()
 
         # Add the Name, Username, Website, and Password fields in tkinter
